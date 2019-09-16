@@ -1,4 +1,4 @@
-require 'pry'
+
 
 class String
 
@@ -15,6 +15,8 @@ class String
   end
 
   def count_sentences
-    self.split.count
-  end
+		new_array = []
+    new_array = self.split(".")
+		new_array.reject{ |e| e.empty? }
+	end
 end
